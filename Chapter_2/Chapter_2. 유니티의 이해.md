@@ -399,7 +399,7 @@
 >사진(콜라이더 경계)
 
 - 물체의 충돌을 검사.
-- 연두색 실선이 콜라이더의 경계에 표시된다.
+- 주황색 실선이 콜라이더의 경계에 표시된다.
 - ***오브젝트가 그려진 부분과 콜라이더 경계는 다르다!!!***
 - 콜라이더 영역을 수정해 실제 물체보다 크게 만들거나 작게 만들어 다양한 응용이 가능하다.
 
@@ -534,15 +534,50 @@
 
 ## 6. 공굴리기 만들기
 
->설명
+>간단한 물리를 적용해 공을 경사에 따라 굴려보자!
 
 ### 1. 프로젝트 생성
 
-- 설명...
+- 2D(혹은 2D 코어)로 프로젝트를 만들자!
 
 ### 2. 바닥 만들기
 
-- 설명...
+- 스프라이트 생성 기능을 이용해 사각형과 원 스프라이트를 만들자.
+	- 프로젝트 뷰에서 \[Create] 버튼을 누르거나 빈 공간을 우클릭해 \[2D] - \[Sprites] - \[Square/Circle]을 누르면 된다.
+
+![[6_2_1.make_project_sprites.png]]
+
+- 하이어라키 뷰에서 게임 오브젝트를 만든다.
+	- \[Create] - \[2D Object] - \[Splites] - \[Square]
+
+![[6_2_2.make_hierarchy_splite_square.png]]
+
+-  생성된 Square를 눌러 이름을 Floor로 바꾸자.
+	- 직관적인 이름을 설정해 가시성을 높이는 것이 좋다. 다른 코드에서도!
+
+![[6_2_3.inspector_sprite_renderer_sprite.png]]
+
+- Square로 생성했으므로 인스펙터의 스프라이트 렌더러 컴포넌트를 확인하면 Sprite이 Square로 되어있다.
+	- 우측 동그라미 버튼을 누르면 다른 Sprite로 쉽게 변경할 수 있다!
+
+![[6_2_4.locate_floor_game_obj.png]]
+
+- 앞서 설명한 대로 씬 뷰 카메라 정 중앙에 Floor 게임 오브젝트가 있고, 게임 뷰 정 중앙에 있는 것을 볼 수 있다.
+
+![[6_2_5.inspector_view_of_floor_obj.png]]
+
+- 인스펙터 창 Color를 눌러 RGB를 모두 0으로 설정하면 검은색이 된다.
+- 인스펙터 창 제일 아래에 \[Add Component] 버튼을 눌러 Box Collider 2D를 찾아 누른다.
+	- 2D가 없는 것은 3D다. 잘 구분하자!
+-  정상적으로 Collider가 추가됐으면 아래와 같이 Scene View에서 Floor object 겉에 주황색 실선이 생긴다.
+	- Inspector View에서 Box Collider Component의 \[Edit Collider] 버튼을 누르면 파란 점을 움직여 영역을 조절할 수 있다!
+
+![[6_2_6.collider_area_of_floor_obj.png]]
+
+- 이제 Floor를 Scene View에서 여러 개 만들어 이전에 설명했던 Hand Tool, Rotate Tool, Rect Tool 등을 적절히 활용해 맵을 만들어 보자.
+	- Rect Tool로 Floor object를 누른 후 \[Ctrl] + \[C], \[Ctrl] + \[V]로 복붙할 수도 있지만, Floor object를 누른 후  \[Ctrl] + \[D]를 누르면 즉시 복사 된다!
+
+![[6_2_7.sample_map.png]]
 
 ### 3. 공 만들기
 
