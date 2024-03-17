@@ -581,26 +581,43 @@
 
 ### 3. 공 만들기
 
-- 설명...
+![[6_3_1.ball_obj_inspector.png]]
+
+- Floor를 만들었을 때와 같이 Splite object를 만들어 준다.
+	- Square 대신 Circle을 고르고, 이름은 Ball로 하자.
+	- 공의 크기는 적절하게 설정해주자. \[Shift]를 누른 체 드래그하면 비율을 유지하며 크기 조정이 가능하다.
+	- 색깔도 구분 가능한 색으로 설정한다.
+
+![[6_3_2.circle_collider_2d.png]]
+
+- Floor와 마찬가지로 Collider를 추가해준다.
+	- 원 형태이므로 Circle Collider 2D를 선택해야 한다.
+
+![[6_3_3.rigidbody_2d.png]]
+
+- Floor와 달리 중력의 영향(물리 법칙)을 받아야 하므로 \[Add Component]를 누른 후 'Rigidbody 2D'를 추가해준다.
 
 ### 4. 배경색 바꾸기
 
-- 설명...
+![[6_4_1.backround_color_ctl.png]]
+
+- 배경 색은 Main Camera 게임 오브젝트를 선택한 후, inspecter View의 Camera에 'Background' 항목을 조정하면 된다.
+	- 상단 사진의 왼쪽 화살표가 Main Camera 게임 오브젝트이고, 우측 화살표가 Background다.
+	- 눈이 아프지 않고 구분이 가능하도록 적절히 조정해주자.
+
+![[6_4_2.play_button.png]]
+
+- 화면 상단의 중앙부에 있는 재생 버튼을 눌러 실제 움직임을 확인한다.
+- ***테스트 플레이 도중 값을 변경하면 변경 사항이 저장되지 않는다.***
+	- 재생 버튼을 한 번 더 눌러 테스트 플레이를 종료하고 조정해주자.
 
 ---
 
 ## 7. 완성된 씬 저장하기
 
->설명
+- \[File] - \[Save As Scene Template...]를 눌러 씬을 저장할 수 있다.
+	- 자주 저장하는 습관을 갖자.
 
-### 1. sample_title1
+![[7_1.not_saved.png]]
 
-- 설명...
-
-### 2. sample_title2
-
-- 설명...
-
-### ３. sample_title3
-
-- 설명...
+- 화면 최상단 플랫폼의 표기 옆에 조그만하게 '\*'가 있다면 마지막 저장 후 변경 사항이 있다는 뜻이다.
